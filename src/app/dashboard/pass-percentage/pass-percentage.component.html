@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-header>
+    <div class="grid-icon"></div>
+    <div class="card-header">Pass Percentage</div>
+  </mat-card-header>
+<div class="p-5" id="pass-chart">
+  <apx-chart
+    [series]="chartOptions.series"
+    [chart]="chartOptions.chart"
+    [xaxis]="chartOptions.xaxis"
+    [plotOptions]="chartOptions.plotOptions"
+    [dataLabels]="chartOptions.dataLabels"
+    [grid]="chartOptions.grid"
+    [colors]="chartOptions.colors"
+    [tooltip]="chartOptions.tooltip"
+    [yaxis]="chartOptions.yaxis">
+  </apx-chart>
+</div>
+</mat-card>

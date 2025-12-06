@@ -1,0 +1,72 @@
+/* color classes */
+.kpi-icon.male, .value.male { color: #2e8af7; }
+.kpi-icon.female, .value.female { color: #e24b8b; }
+.kpi-icon.others, .value.others { color: #9b59b6; }
+.kpi-icon.active, .value.active { color: #00a86b; }
+.kpi-icon.engaged, .value.engaged { color: #d98e00; }
+
+.kpi-divider.male    { background-color: #2e8af7 !important; }
+.kpi-divider.female  { background-color: #e24b8b !important; }
+.kpi-divider.others  { background-color: #9b59b6 !important; }
+.kpi-divider.active  { background-color: #00a86b !important; }
+.kpi-divider.engaged { background-color: #d98e00 !important; }
+
+.card-container {
+  width: 100%;
+  padding: 0 !important;
+}
+
+/* Main row layout */
+.kpi-row {
+  display: flex;
+  flex-direction: row;
+  padding: 15px 20px;
+  align-items: center;
+}
+
+/* Each column = equal width */
+.kpi-col {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  position: relative;
+}
+
+
+/* Divider line */
+.kpi-divider {
+  position: absolute;
+  right: 0;
+  width: 2px;
+  height: 55px;
+}
+
+/* Icon */
+.kpi-icon {
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Text area */
+.kpi-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.value {
+  padding: 4px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+

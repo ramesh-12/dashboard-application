@@ -1,0 +1,35 @@
+<mat-card>
+  <mat-card-header fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="10px">
+
+    <!-- LEFT SIDE -->
+    <div fxFlex="flex" fxLayoutAlign="start" fxLayoutGap="8px">
+      <div class="grid-icon"></div>
+      <span class="card-header">District Ranking</span>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <mat-form-field appearance="outline" style="width: 200px;">
+      <mat-select [(value)]="rankBy" (selectionChange)="updateRank()">
+        <mat-option value="enrollment">Rank By Enrollment</mat-option>
+        <mat-option value="passPercent">Pass %</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+  </mat-card-header>
+
+
+<div id="districtRankingChart">
+    <apx-chart
+      [series]="chartOptions.series"
+      [chart]="chartOptions.chart"
+      [xaxis]="chartOptions.xaxis"
+      [plotOptions]="chartOptions.plotOptions"
+      [stroke]="chartOptions.stroke"
+      [colors]="chartOptions.colors"
+      [legend]="chartOptions.legend"
+      [grid]="chartOptions.grid"
+      [yaxis]="chartOptions.yaxis"
+      [tooltip]="chartOptions.tooltip"
+    ></apx-chart>
+  </div>
+</mat-card>

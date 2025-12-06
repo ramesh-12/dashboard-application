@@ -1,0 +1,21 @@
+<mat-card class="card-container">
+  <div class="kpi-row">
+
+    <div class="kpi-col" *ngFor="let kpi of kpiData; let i = index">
+
+      <div class="kpi-icon" [ngClass]="kpi.color">
+        <i class="fa-solid" [ngClass]="kpi.icon"></i>
+      </div>
+
+      <div class="kpi-content">
+        <div class="label">{{ kpi.label }}</div>
+        <div class="value" [ngClass]="kpi.color">{{ kpi.value | number: '1.0-0' }}</div>
+      </div>
+
+      <!-- Divider (hidden on last column) -->
+      <div *ngIf="kpi.nextColor" class="kpi-divider" [ngClass]="kpi.nextColor">
+      </div>
+    </div>
+
+  </div>
+</mat-card>

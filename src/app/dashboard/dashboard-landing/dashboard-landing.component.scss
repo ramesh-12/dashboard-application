@@ -1,0 +1,104 @@
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 20px;
+  background: var(--bg-color);
+  border-bottom: 1px solid var(--border-color);
+
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.period-toggle {
+  display: flex;
+  border-radius: 8px;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+
+  button {
+    padding: 6px 14px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--text-muted);
+    font-weight: 500;
+
+    &.active {
+      background: var(--card-bg);
+      color: var(--text-color);
+      border-radius: 6px;
+    }
+  }
+}
+
+.date-range {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.district-dropdown {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.right-section h2 {
+  margin: 0;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+
+.theme-toggle {
+  border: none;
+  background: var(--card-bg);
+  color: var(--text-color);
+  border-radius: 6px;
+  padding: 8px;
+  cursor: pointer;
+  margin-left: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  mat-icon {
+    font-size: 22px;
+  }
+
+  &:hover {
+    background: var(--border-color);
+  }
+}
+
+.learner-total{
+  padding: 15px;
+}
+
+.row-space {
+  margin-bottom: 15px;
+}
+
+.padding-15 {
+  padding-left: 15px;
+  padding-right: 25px;
+}
+
+.padding-20{
+  padding-left: 15px;
+  padding-right: 18px;
+}
+
+

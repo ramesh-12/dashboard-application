@@ -1,0 +1,73 @@
+<div class="toolbar">
+
+  <div class="right-section">
+    <h2>Dashboard</h2>
+  </div>
+
+  <div class="left-section">
+
+    <div class="period-toggle">
+      <button mat-raised-button
+              [class.active]="period === 'Monthly'"
+              (click)="togglePeriod('Monthly')">
+        Monthly
+      </button>
+
+      <button mat-raised-button
+              [class.active]="period === 'Quarterly'"
+              (click)="togglePeriod('Quarterly')">
+        Quarterly
+      </button>
+    </div>
+
+    <div class="date-range">
+      01 Jan, 2024 - 31 Dec, 2024
+    </div>
+
+    <select class="district-dropdown"
+            (change)="onDistrictSelect($event)">
+      <option *ngFor="let d of districts">
+        {{ d }}
+      </option>
+    </select>
+
+    <!-- Dark/Light Theme Toggle -->
+    <button class="theme-toggle" (click)="toggleTheme()">
+      <mat-icon>{{ isDarkMode ? 'brightness_7' : 'brightness_4' }}</mat-icon>
+    </button>
+  </div>
+</div>
+<div class="learner-total">
+  <app-learner-total [summary]="dashboardData?.summary"></app-learner-total>
+</div>
+
+  <div fxLayout="row" fxLayoutGap="15px" class="padding-15 row-space">
+    <div fxFlex="55">
+      <app-course-progress></app-course-progress>
+    </div>
+    <div fxFlex="45">
+      <app-pass-percentage></app-pass-percentage>
+    </div>
+  </div>
+
+  <div fxLayout="row" fxLayoutGap="15px" class="padding-20 row-space">
+    <div fxFlex="35">
+      <app-assessment-score></app-assessment-score>
+    </div>
+    <div fxFlex="65">
+      <app-grade-breakdown></app-grade-breakdown>
+    </div>
+  </div>
+
+<div fxLayout="row" fxLayoutGap="15px" class="padding-15 row-space">
+  <div fxFlex="100">
+    <app-district-ranking></app-district-ranking>
+  </div>
+</div>
+
+
+
+
+
+
+

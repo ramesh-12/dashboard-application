@@ -1,0 +1,17 @@
+<mat-card>
+  <mat-card-header>
+    <div class="grid-icon"></div>
+    <div class="card-header">Average Assessment score</div>
+  </mat-card-header>
+<div id="donutChart">
+  <apx-chart
+    [series]="chartOptions.series"
+    [chart]="chartOptions.chart"
+    [labels]="chartOptions.labels"
+    [colors]="chartOptions.colors"
+    [legend]="chartOptions.legend"
+    [plotOptions]="chartOptions.plotOptions"
+    [dataLabels]="chartOptions.dataLabels">
+  </apx-chart>
+</div>
+</mat-card>

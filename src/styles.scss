@@ -1,0 +1,89 @@
+// -------------------------------
+// Angular Material Theming Setup
+// -------------------------------
+@use '@angular/material' as mat;
+
+// Include core Material styles
+@include mat.core();
+
+// Define palettes
+$dashboard-application-primary: mat.define-palette(mat.$indigo-palette);
+$dashboard-application-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$dashboard-application-warn: mat.define-palette(mat.$red-palette);
+
+// Create theme object
+$dashboard-application-theme: mat.define-light-theme((
+  color: (
+    primary: $dashboard-application-primary,
+    accent: $dashboard-application-accent,
+    warn: $dashboard-application-warn,
+  )
+));
+
+// Include all component themes
+@include mat.all-component-themes($dashboard-application-theme);
+
+// -------------------------------
+// Global CSS
+// -------------------------------
+* {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* Light Theme */
+:root {
+  --bg-color: #e1e2e3;
+  --card-bg: #ffffff;
+  --text-color: #101010;
+}
+
+/* Dark Theme */
+.dark-theme {
+  --bg-color: #1e1e1e;
+  --card-bg: #000000;
+  --text-color: #f5f5f5;
+}
+
+/* Apply theme to body */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.mdc-card,
+.mat-mdc-card,
+.mdc-elevated-card {
+  background-color: var(--card-bg) !important;
+}
+
+.mdc-elevated-card .mdc-card__primary-action,
+.mdc-card__primary-action {
+  background-color: var(--card-bg) !important;
+}
+
+.grid-icon {
+  width: 20px;
+  height: 20px;
+  background-color: #535252;
+  mask: url("assets/icons/grid.svg") no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url("assets/icons/grid.svg") no-repeat center;
+  -webkit-mask-size: contain;
+  margin-right: 7px;
+}
+
+.card-header{
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.p-5{
+  padding: 15px;
+}
